@@ -1,5 +1,5 @@
 
-name: GORISH Website CI/CD
+name: GORISH Website
 
 on:
   push:
@@ -24,9 +24,9 @@ jobs:
 
       - name: Validate website files
         run: |
-          test -f index.html
-          test -f style.css
-          test -f Dockerfile
+          test index.html
+          test style.css
+          test Dockerfile
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
